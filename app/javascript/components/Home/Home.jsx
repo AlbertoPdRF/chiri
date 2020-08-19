@@ -1,15 +1,17 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 import Style from '../Style/Style';
 
+import Products from '../Products/Products';
+
 const Home = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const style = Style();
 
   return (
@@ -19,17 +21,18 @@ const Home = () => {
           <Typography variant="h1">Chiri</Typography>
         </Grid>
         <Grid item>
-          <WbSunnyIcon />
-          <BeachAccessIcon />
+          <WbSunnyIcon color="primary" />
+          <BeachAccessIcon color="primary" />
         </Grid>
         <Grid>
-          <Button
+          {/*<Button
             variant="contained"
             color="primary"
-            onClick={() => history.push('/carta')}
+            onClick={() => history.push('/products')}
           >
             Ver carta
-          </Button>
+          </Button>*/}
+          <Products />
         </Grid>
       </Grid>
     </div>
